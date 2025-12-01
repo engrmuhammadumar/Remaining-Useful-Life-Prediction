@@ -18,13 +18,13 @@ print("="*70)
 
 CONFIG = {
     'data_path': r'E:\Collaboration Work\With Farooq\phm dataset\PHM Challange 2010 Milling',
-    'd_model': 128,          # Match optimized training
+    'd_model': 256,
     'nhead': 8,
-    'num_layers': 4,         # Match optimized training
-    'dropout': 0.15,         # Match optimized training
-    'batch_size': 32,        # Match optimized training
-    'num_epochs': 100,
-    'learning_rate': 0.001,  # Match optimized training
+    'num_layers': 6,
+    'dropout': 0.2,
+    'batch_size': 16,
+    'num_epochs': 100,  # Reduced for ablation
+    'learning_rate': 0.0005,
     'patience': 15,
 }
 
