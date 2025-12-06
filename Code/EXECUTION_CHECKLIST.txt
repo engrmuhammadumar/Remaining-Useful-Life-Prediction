@@ -1,0 +1,293 @@
+================================================================================
+EXECUTION CHECKLIST - Step-by-Step Guide
+================================================================================
+
+□ STEP 1: VERIFY INSTALLATION
+   └─ Run: python quick_demo.py
+      Expected: Demo completes without errors
+      If fails: Check dependencies (pip install -r requirements.txt)
+
+□ STEP 2: PREPARE DATA
+   └─ Organize your PHM 2010 data:
+      E:\Collaboration Work\With Farooq\phm dataset\PHM Challange 2010 Milling\
+      ├── c1\c1_wear.csv
+      ├── c4\c4_wear.csv
+      └── c6\c6_wear.csv
+      
+   └─ Verify CSV format:
+      Columns: cut, flute_1, flute_2, flute_3
+      
+   └─ Update path in main_training.py (line ~40):
+      CONFIG['data_path'] = r'YOUR_PATH_HERE'
+
+□ STEP 3: RUN QUICK TEST
+   └─ Test data loading:
+      >>> from phm2010_data_loader import PHM2010DataLoader
+      >>> loader = PHM2010DataLoader('your_path')
+      >>> data_dict = loader.prepare_data()
+      
+   └─ Expected output:
+      - "Loaded 3 conditions"
+      - "Created XXX sequences"
+      - No error messages
+
+□ STEP 4: CHOOSE EXECUTION METHOD
+
+   Option A: Complete Pipeline (Recommended for first run)
+   -------------------------------------------------------
+   □ python main_training.py
+   
+   □ Expected runtime: 30-60 minutes (GPU) or 2-3 hours (CPU)
+   
+   □ Monitor console for:
+      - Data loading progress
+      - Training epoch updates
+      - Evaluation metrics
+      - File generation confirmations
+   
+   □ Expected outputs in current directory:
+      - best_baseline_model.pth
+      - best_causal_model.pth
+      - causal_decomposition.png
+      - counterfactual_analysis.png
+      - counterfactual_results.csv
+      - training_curves.png
+      - predictions_comparison.png
+      - summary_report.txt
+
+   Option B: Interactive Notebook (Recommended for experimentation)
+   ----------------------------------------------------------------
+   □ jupyter notebook causal_transformer_notebook.ipynb
+   
+   □ Run cells sequentially (Shift+Enter)
+   
+   □ Advantages:
+      - See intermediate results
+      - Modify parameters easily
+      - Interactive visualization
+      - Custom experiments
+
+   Option C: Programmatic (For integration)
+   ----------------------------------------
+   □ See notebook or main_training.py for examples
+   
+   □ Basic structure:
+      1. Load data
+      2. Create datasets and loaders
+      3. Initialize models
+      4. Train models
+      5. Evaluate and analyze
+
+□ STEP 5: VERIFY RESULTS
+
+   □ Check model performance:
+      - Baseline MAE: 1-5 cuts (good), >10 cuts (investigate)
+      - Causal MAE: 3-8 cuts (good), >15 cuts (investigate)
+   
+   □ Inspect visualizations:
+      - training_curves.png: Losses should decrease
+      - predictions_comparison.png: Points near diagonal line
+      - causal_decomposition.png: Components should be reasonable
+      - counterfactual_analysis.png: Patterns should make sense
+   
+   □ Review counterfactual results:
+      - Open counterfactual_results.csv
+      - Check delta_rul values are reasonable (-50 to +50 cuts)
+      - Verify condition effects are consistent
+
+□ STEP 6: INTERPRET RESULTS
+
+   □ Read summary_report.txt for:
+      - Performance metrics
+      - Causal insights
+      - Counterfactual findings
+   
+   □ Key questions to answer:
+      - Which model performs better for your needs?
+      - What are the main causal factors affecting RUL?
+      - Which operating condition is optimal?
+      - How much does maintenance help?
+
+□ STEP 7: TROUBLESHOOTING (If needed)
+
+   Common Issue 1: Import Error
+   ----------------------------
+   □ Error: "ModuleNotFoundError"
+   □ Solution: pip install -r requirements.txt
+   
+   Common Issue 2: Data Loading Error
+   ----------------------------------
+   □ Error: "File not found" or "No wear data files found"
+   □ Solution: 
+      - Check data path is correct
+      - Verify file names: c1_wear.csv (not c1.csv)
+      - Ensure files are in subdirectories: c1/, c4/, c6/
+   
+   Common Issue 3: CUDA Out of Memory
+   ----------------------------------
+   □ Error: "CUDA out of memory"
+   □ Solution:
+      - Reduce batch_size to 16 or 8
+      - Reduce d_model to 64
+      - Use CPU: device = torch.device('cpu')
+   
+   Common Issue 4: Poor Performance
+   --------------------------------
+   □ Symptom: MAE > 20 cuts
+   □ Solution:
+      - Check data normalization
+      - Increase num_epochs to 150
+      - Verify sequence_length is appropriate
+      - Check for data issues
+   
+   Common Issue 5: No Convergence
+   ------------------------------
+   □ Symptom: Loss not decreasing
+   □ Solution:
+      - Lower learning_rate to 0.0005
+      - Check data preprocessing
+      - Verify model inputs are correct
+
+□ STEP 8: EXPERIMENT (Optional)
+
+   □ Try different hyperparameters:
+      - sequence_length: 15, 20, 25
+      - d_model: 64, 128, 256
+      - num_layers: 2, 4, 6
+      - learning_rate: 0.0005, 0.001, 0.002
+   
+   □ Modify counterfactual scenarios:
+      - Different condition switches
+      - Various wear reduction percentages
+      - Multi-factor interventions
+   
+   □ Add custom visualizations:
+      - Condition-specific analyses
+      - Temporal degradation plots
+      - Error distribution by condition
+
+□ STEP 9: SAVE YOUR WORK
+
+   □ Models saved automatically:
+      - best_baseline_model.pth
+      - best_causal_model.pth
+   
+   □ To load later:
+      model = CausalStructuralTransformer(...)
+      model.load_state_dict(torch.load('best_causal_model.pth'))
+      model.eval()
+   
+   □ Back up important files:
+      - All .png visualizations
+      - counterfactual_results.csv
+      - summary_report.txt
+      - Your modified code
+
+□ STEP 10: PREPARE FOR PUBLICATION (If applicable)
+
+   □ Run additional experiments:
+      - Cross-validation
+      - Ablation studies
+      - Baseline comparisons
+      - Sensitivity analysis
+   
+   □ Generate publication-quality figures:
+      - Increase DPI to 600
+      - Use colorblind-friendly palettes
+      - Add error bars where appropriate
+   
+   □ Write results section:
+      - Copy metrics from summary_report.txt
+      - Describe key findings
+      - Interpret counterfactual insights
+   
+   □ Prepare supplementary materials:
+      - Code repository (GitHub)
+      - Example data
+      - Additional visualizations
+      - Detailed methodology
+
+================================================================================
+QUICK REFERENCE COMMANDS
+================================================================================
+
+# Installation
+pip install -r requirements.txt
+
+# Quick test
+python quick_demo.py
+
+# Full pipeline
+python main_training.py
+
+# Interactive
+jupyter notebook causal_transformer_notebook.ipynb
+
+# Load data only
+from phm2010_data_loader import PHM2010DataLoader
+loader = PHM2010DataLoader('path')
+data = loader.prepare_data()
+
+# Train model (basic)
+from causal_transformer_rul import CausalStructuralTransformer, train_model
+model = CausalStructuralTransformer(input_dim=3, num_conditions=3)
+train_model(model, train_loader, val_loader)
+
+# Counterfactual analysis
+cf = model.counterfactual_predict(seq, orig_cond, hi, new_condition=4)
+print(f"RUL change: {cf['delta_rul']}")
+
+================================================================================
+SUCCESS CRITERIA
+================================================================================
+
+Your implementation is working correctly if:
+
+✓ Data loads without errors
+✓ Models train (loss decreases)
+✓ Baseline MAE < 10 cuts
+✓ Causal MAE < 15 cuts
+✓ All visualizations generated
+✓ Counterfactual results are reasonable
+✓ Physics constraints satisfied (HI effect negative)
+
+================================================================================
+TIMELINE ESTIMATE
+================================================================================
+
+First-time setup: 30 minutes
+- Install dependencies: 10 min
+- Prepare data: 10 min
+- Verify installation: 10 min
+
+Complete run: 1-3 hours
+- Data loading: 5 min
+- Baseline training: 20-40 min
+- Causal training: 30-60 min
+- Evaluation & analysis: 10-20 min
+- Visualization: 5-10 min
+
+Experimentation: Variable
+- Parameter tuning: 2-4 hours per run
+- Additional analysis: 1-2 hours
+- Publication prep: 1-2 days
+
+================================================================================
+SUPPORT
+================================================================================
+
+For issues or questions:
+1. Check PROJECT_SUMMARY.txt (comprehensive guide)
+2. Review README.md (documentation)
+3. Inspect code comments (inline explanations)
+4. Check troubleshooting section above
+
+Common resources:
+- PyTorch documentation: pytorch.org/docs
+- Transformer papers: "Attention Is All You Need"
+- Causal inference: Pearl's "The Book of Why"
+- PHM resources: PHM Society website
+
+================================================================================
+END OF CHECKLIST
+================================================================================
