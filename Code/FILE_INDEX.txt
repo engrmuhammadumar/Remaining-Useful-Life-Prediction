@@ -1,0 +1,296 @@
+================================================================================
+FILE INDEX - Causal Transformer RUL Framework
+================================================================================
+
+All files for the complete implementation are listed below.
+
+================================================================================
+PYTHON IMPLEMENTATION FILES
+================================================================================
+
+1. causal_transformer_rul.py (26 KB)
+   ├─ BaselineTransformer class
+   ├─ CausalStructuralTransformer class (main novelty)
+   ├─ PHM2010Dataset class
+   ├─ PositionalEncoding module
+   ├─ PhysicsInformedLoss class
+   ├─ Training functions
+   ├─ Evaluation functions
+   ├─ Visualization functions
+   │  ├─ visualize_causal_decomposition()
+   │  ├─ perform_counterfactual_analysis()
+   │  ├─ visualize_counterfactual_results()
+   │  ├─ plot_training_curves()
+   │  └─ plot_predictions_comparison()
+   └─ Helper utilities
+
+2. phm2010_data_loader.py (13 KB)
+   ├─ PHM2010DataLoader class
+   │  ├─ load_wear_data()
+   │  ├─ compute_health_indicator()
+   │  ├─ create_temporal_sequences()
+   │  ├─ normalize_sequences()
+   │  ├─ split_data()
+   │  └─ prepare_data() [main pipeline]
+   └─ Alternative format loader
+
+3. main_training.py (15 KB)
+   └─ Complete training and evaluation pipeline
+      ├─ Data preparation
+      ├─ Baseline transformer training
+      ├─ Causal transformer training
+      ├─ Model comparison
+      ├─ Causal decomposition analysis
+      ├─ Counterfactual analysis
+      ├─ Comprehensive visualization
+      └─ Summary report generation
+
+4. quick_demo.py (7.1 KB)
+   └─ Quick demonstration with synthetic data
+      ├─ Synthetic data generation
+      ├─ Model training (simplified)
+      ├─ Causal decomposition example
+      └─ Counterfactual analysis demo
+
+================================================================================
+JUPYTER NOTEBOOK
+================================================================================
+
+5. causal_transformer_notebook.ipynb (19 KB)
+   └─ Interactive notebook with 10 sections:
+      1. Setup and configuration
+      2. Load and prepare data
+      3. Train baseline transformer
+      4. Train causal-structural transformer
+      5. Model comparison
+      6. Causal decomposition analysis
+      7. Counterfactual analysis
+      8. Interactive counterfactual query
+      9. Summary and conclusions
+      10. Save models and results
+
+================================================================================
+DOCUMENTATION FILES
+================================================================================
+
+6. README.md (9.5 KB)
+   ├─ Overview
+   ├─ Architecture description
+   ├─ Dataset information
+   ├─ Quick start guide
+   ├─ Project structure
+   ├─ Key features
+   ├─ Expected results
+   ├─ Citation information
+   ├─ Advanced usage
+   ├─ Troubleshooting
+   ├─ Visualization outputs
+   ├─ Contributing guidelines
+   └─ Related work
+
+7. PROJECT_SUMMARY.txt (17 KB)
+   ├─ Complete overview
+   ├─ File descriptions
+   ├─ Installation & setup
+   ├─ Quick start guide
+   ├─ Detailed usage instructions
+   ├─ Model architecture details
+   ├─ Expected outputs
+   ├─ Troubleshooting guide
+   ├─ Research contributions
+   └─ Publication preparation steps
+
+8. EXECUTION_CHECKLIST.txt (9.0 KB)
+   ├─ Step-by-step execution guide
+   ├─ Verification steps
+   ├─ Troubleshooting checklist
+   ├─ Quick reference commands
+   ├─ Success criteria
+   ├─ Timeline estimates
+   └─ Support resources
+
+9. requirements.txt (139 B)
+   └─ Python dependencies with versions
+
+10. FILE_INDEX.txt (this file)
+    └─ Complete file listing
+
+================================================================================
+GENERATED OUTPUTS (After running)
+================================================================================
+
+The following files will be generated after running the code:
+
+Models:
+-------
+- best_baseline_model.pth (~1 MB)
+- best_causal_model.pth (~1.2 MB)
+
+Visualizations:
+--------------
+- causal_decomposition.png
+  └─ 6-panel visualization showing RUL breakdown for sample predictions
+  
+- counterfactual_analysis.png
+  └─ 4-panel visualization:
+     • Condition change effects heatmap
+     • RUL change distribution
+     • Wear reduction impact scatter
+     • Factual vs counterfactual comparison
+
+- training_curves.png
+  └─ 2-panel showing training/validation losses for both models
+
+- predictions_comparison.png
+  └─ 3-panel comparison:
+     • Baseline predictions scatter
+     • Causal predictions scatter
+     • Error distribution histogram
+
+Data Files:
+----------
+- counterfactual_results.csv
+  └─ Detailed counterfactual scenario results with columns:
+     sample_id, original_condition, new_condition, factual_rul,
+     counterfactual_rul, delta_rul, intervention_type
+
+Reports:
+-------
+- summary_report.txt
+  └─ Comprehensive results summary including:
+     • Data statistics
+     • Model performance metrics
+     • Causal insights
+     • Counterfactual findings
+     • Key contributions
+     • Generated outputs list
+
+================================================================================
+FILE USAGE GUIDE
+================================================================================
+
+FOR FIRST-TIME USERS:
+--------------------
+1. Read: README.md (quick overview)
+2. Read: EXECUTION_CHECKLIST.txt (step-by-step)
+3. Run: python quick_demo.py (verify installation)
+4. Run: python main_training.py (full pipeline)
+
+FOR INTERACTIVE EXPLORATION:
+---------------------------
+1. Open: causal_transformer_notebook.ipynb
+2. Execute cells sequentially
+3. Experiment with parameters
+
+FOR DETAILED UNDERSTANDING:
+--------------------------
+1. Read: PROJECT_SUMMARY.txt (comprehensive guide)
+2. Study: causal_transformer_rul.py (implementation)
+3. Review: phm2010_data_loader.py (data pipeline)
+
+FOR TROUBLESHOOTING:
+-------------------
+1. Check: EXECUTION_CHECKLIST.txt (common issues)
+2. Review: PROJECT_SUMMARY.txt (troubleshooting section)
+3. Inspect: README.md (troubleshooting guide)
+
+FOR PUBLICATION PREPARATION:
+---------------------------
+1. Review: PROJECT_SUMMARY.txt (Section 10)
+2. Run all experiments
+3. Generate publication-quality figures
+4. Prepare supplementary materials
+
+================================================================================
+FILE DEPENDENCIES
+================================================================================
+
+Execution Order:
+----------------
+1. requirements.txt → Install dependencies first
+2. phm2010_data_loader.py → Data preprocessing
+3. causal_transformer_rul.py → Model implementations
+4. main_training.py OR causal_transformer_notebook.ipynb → Run experiments
+
+Import Dependencies:
+-------------------
+main_training.py imports from:
+- phm2010_data_loader.py
+- causal_transformer_rul.py
+
+causal_transformer_rul.py requires:
+- torch, numpy, pandas, matplotlib, seaborn, sklearn
+
+phm2010_data_loader.py requires:
+- numpy, pandas, sklearn, os, pathlib
+
+================================================================================
+TOTAL PACKAGE SIZE
+================================================================================
+
+Source Code: ~90 KB
+Documentation: ~36 KB
+Total (before running): ~126 KB
+
+After Training:
+- Models: ~2.2 MB
+- Visualizations: ~500 KB
+- Data files: ~100 KB
+- Reports: ~50 KB
+Total (after running): ~3 MB
+
+================================================================================
+VERSION INFORMATION
+================================================================================
+
+Framework Version: 1.0.0
+Release Date: November 2024
+Author: Muhammad Umar
+Institution: University of Ulsan, South Korea
+
+Python Version: 3.8+
+PyTorch Version: 2.0+
+CUDA: Optional (CPU supported)
+
+================================================================================
+QUICK ACCESS LINKS
+================================================================================
+
+Start Here:
+- README.md (overview)
+- EXECUTION_CHECKLIST.txt (step-by-step)
+
+Run Code:
+- python main_training.py (complete pipeline)
+- jupyter notebook causal_transformer_notebook.ipynb (interactive)
+- python quick_demo.py (test installation)
+
+Documentation:
+- PROJECT_SUMMARY.txt (comprehensive guide)
+- README.md (quick reference)
+- Code comments (inline documentation)
+
+================================================================================
+UPDATES AND MAINTENANCE
+================================================================================
+
+To update:
+1. Check for new dependencies in requirements.txt
+2. Review EXECUTION_CHECKLIST.txt for new steps
+3. Read PROJECT_SUMMARY.txt for methodology updates
+4. Check README.md for new features
+
+To maintain:
+1. Keep dependencies updated: pip install -U -r requirements.txt
+2. Back up trained models regularly
+3. Version control with git
+4. Document any modifications
+
+================================================================================
+END OF FILE INDEX
+================================================================================
+
+For questions or issues, refer to:
+- PROJECT_SUMMARY.txt (Section 8: Troubleshooting)
+- README.md (Troubleshooting section)
+- EXECUTION_CHECKLIST.txt (Step 7: Troubleshooting)
