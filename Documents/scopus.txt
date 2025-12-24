@@ -1,0 +1,74 @@
+﻿Scopus
+EXPORT DATE: 13 August 2025
+
+Nguyen D.-T., Kim J.-M.
+AUTHOR FULL NAMES: Nguyen, Duc-Thuan (59242767200); Kim, Jong-Myon (59894402600)
+59242767200; 59894402600
+Tool wear detection using novel acoustic emission features and a two-stage Mann-Whitney U test
+(2025) Applied Acoustics, 240, art. no. 110952, Cited 0 times.
+DOI: 10.1016/j.apacoust.2025.110952
+https://www.scopus.com/inward/record.uri?eid=2-s2.0-105011591470&doi=10.1016%2fj.apacoust.2025.110952&partnerID=40&md5=621e3c7b1bfc5b4cc54058e5678a4014
+
+AFFILIATIONS: Department of Electrical, Electronic and Computer Engineering, University of Ulsan, Ulsan, 44610, South Korea; Prognosis and Diagnostics Technologies Co., Ltd., Ulsan, 44610, South Korea
+ABSTRACT: Accurate detection of tool wear is a critical challenge in manufacturing due to the complex and nonlinear nature of acoustic emission (AE) signals generated during machining. Conventional methods, including machine learning and deep learning, often fail to detect the subtle changes associated with early tool wear and suffer from a lack of explainability in their decision-making processes. This paper introduces three novel AE features: rank-based entropy, fractal geometry indicator, and chaos quantifier. These features are specifically designed to capture the intricate dynamics of AE signals that traditional methods overlook. To validate the discriminative power of these features, a two-stage Mann-Whitney U test is employed, combining the new features with other advanced AE features to differentiate between worn and unworn tools. Experimental results from milling and drilling machine tests show that the proposed approach significantly improves detection sensitivity, accuracy, and interpretability compared to existing methods, providing a more robust framework for tool wear detection. The source code for this paper is available at: https://github.com/thuan-researcher/novel-ae-features-two-stage-mu. © 2025 Elsevier Ltd
+AUTHOR KEYWORDS: Acoustic emission; Mann-Whitney U test; Statistical validation; Tool wear detection
+INDEX KEYWORDS: Decision making; Deep learning; Feature extraction; Fractals; Learning systems; Wear of materials; Acoustic emission signal; Acoustic-emissions; Complex nature; Critical challenges; Emission features; Mann-Whitney U-test; Statistical validation; Tool wear; Tool wear detection; Wear detection; Cutting tools
+FUNDING TEXT 1: This work was supported by the Technology Innovation Program (\u201820023566\u2019, \u2018Development and Demonstration of Industrial IoT and AI Based Process Facility Intelligence Support System in Small and Medium Manufacturing Sites\u2019) funded By the Ministry of Trade, Industry&Energy (MOTIE, Korea).
+REFERENCES: Munaro R., Attanasio A., Del Prete A., Tool wear monitoring with artificial intelligence methods: a review, J Manuf Mater Process, 7, (2023); 
+Li X., Liu X., Yue C., Liang S.Y., Wang L., Systematic review on tool breakage monitoring techniques in machining operations, Int J Mach Tool Manuf, 176, (2022); 
+Wang Q., Wang H., Hou L., Yi S., Overview of tool wear monitoring methods based on convolutional neural network, Appl Sci, 2021, 11, (2021); 
+Serin G., Sener B., Ozbayoglu A.M., Unver H.O., Review of tool condition monitoring in machining and opportunities for deep learning, Int J Adv Manuf Technol, 109, pp. 953-974, (2020); 
+Zhou Y., Liu C., Yu X., Liu B., Quan Y., Tool wear mechanism, monitoring and remaining useful life (RUL) technology based on big data: a review, SN Appl Sci, 4, pp. 1-24, (2022); 
+Liu J., Jiang C., Yang X., Sun S., Review of the application of acoustic emission technology in green manufacturing, Int J Precis Eng Manuf-Green Technol, 11, 3, pp. 995-1016, (2023); 
+Asadi R., Niknam S.A., Anahid M.J., Ituarte I.F., The use of wavelet transform to evaluate the sensitivity of acoustic emission signals attributes to variation of cutting parameters in milling aluminum alloys, Int J Adv Manuf Technol, 126, pp. 3039-3052, (2023); 
+Wang R., Song Q., Peng Y., Jin P., Liu Z., Liu Z., A milling tool wear monitoring method with sensing generalization capability, J Manuf Syst, 68, pp. 25-41, (2023); 
+Silva R., Araujo A., Cheng K., Adjallah K., Equeter L., 9; 
+Pimenov D.Y., Bustillo A., Wojciechowski S., Sharma V.S., Gupta M.K., Kuntoglu M.; 
+Goyal D., Mongia C., Sehgal S., Applications of digital signal processing in monitoring machining processes and rotary components: a review, IEEE Sens J, 21, pp. 8780-8804, (2021); 
+Leng S., Wang Z., Min T., Dai Z., Chen G., Detection of tool wear in drilling CFRP/TC4 stacks by acoustic emission, J Vibrat Eng Technol, 8, pp. 463-470, (2020); 
+Huang W., Li Y., Wu X., Shen J., The wear detection of mill-grinding tool based on acoustic emission sensor, Int J Adv Manuf Technol, 124, pp. 4121-4130, (2023); 
+Tien D.H., Thoa P.T.T., Duy T.N., Application of wavelet ratio between acoustic emission and cutting force signal decomposing in intelligent monitoring of cutting tool wear when turning SKD 61, Int J Interact Des Manuf, 18, pp. 525-539, (2024); 
+Priyadarshini M.S., Bajaj M., Prokop L., Berhanu M.; 
+Liao Y., Ragai I., Huang Z., Kerner S., Manufacturing process monitoring using time-frequency representation and transfer learning of deep neural networks, J Manuf Process, 68, pp. 231-248, (2021); 
+Bergs T., Unterberg M., Voigts H., Weiser I.F., Feuerhack A., Trauth D., Wear monitoring in fine blanking processes using feature based analysis of acoustic emission signals, Procedia CIRP, 104, pp. 164-169, (2021); 
+Munaro R., Attanasio A., Del Prete A., Tool wear monitoring with artificial intelligence methods: a review, J Manuf Mater Process, 7, (2023); 
+Sayyad S., Kumar S., Bongale A., Kamat P., Patil S., Kotecha K., Data-driven remaining useful life estimation for milling process: sensors, algorithms, datasets, and future directions, IEEE Access, 9, pp. 110255-110286, (2021); 
+Yang Q., Pattipati K.R., Awasthi U., Bollas G.M., Hybrid data-driven and model-informed online tool wear detection in milling machines, J Manuf Syst, 63, pp. 329-343, (2022); 
+de Farias A., de Almeida S.L.R., Delijaicov S., Seriacopi V., Bordinassi E.C., Simple machine learning allied with data-driven methods for monitoring tool wear in machining processes, Int J Adv Manuf Technol, 109, pp. 2491-2501, (2020); 
+Twardowski P., Tabaszewski M., Wiciak - Pikula M., Felusiak-Czyryca A., Identification of tool wear using acoustic emission signal and machine learning methods, Precis Eng, 72, pp. 738-744, (2021); 
+Chacon J.L.F., de Barrena T.F., Garcia A., de Buruaga M.S., Badiola X., Vicente J., A Novel machine learning-based methodology for tool wear prediction using acoustic emission signals, Sensors, 21, (2021); 
+Krishnamoorthy N.V., Vijay J., Machine learning based tool wear prediction from variability of acoustic sound emission signals, Scalable Computi: Practice Experience, 25, pp. 3725-3740, (2024); 
+Schmetz A., Vahl C., Zhen Z., Reibert D., Mayer S., Zontar D., Et al., Decision support by interpretable machine learning in acoustic emission based cutting tool wear prediction; 
+Nagesh Kulkarni N., Valente N.A., Sabato A., Time-inferred autoencoder: a noise adaptive condition monitoring tool, Mech Syst Sig Process, 204, (2023); 
+Tama B.A., Vania M., Kim I., Lim S., An efficientnet-based weighted ensemble model for industrial machine malfunction detection using acoustic signals, IEEE Access, 10, pp. 34625-34636, (2022); 
+Serror M., Hack S., Henze M., Schuba M., Wehrle K., Challenges and opportunities in securing the industrial internet of things, IEEE Trans Industr Inform, 17, pp. 2985-2996, (2021); 
+Munappy A.R., Bosch J., Olsson H.H., Arpteg A., Brinne B., Data management for production quality deep learning models: challenges and solutions, J Syst Softw, 191, (2022); 
+Lwakatare L.E., Raj A., Crnkovic I., Bosch J., Olsson H.H., Large-scale machine learning systems in real-world industrial settings: a review of challenges and solutions, Inf Softw Technol, 127, (2020); 
+Neupane D., Bouadjenek M.R., Dazeley R., Aryal S., (2024); 
+Rani G.J., Hashmi M.F., Gupta A., Surface electromyography and artificial intelligence for human activity recognition - a systematic review on methods, emerging trends applications, challenges, and future implementation, IEEE Access, 11, pp. 105140-105169, (2023); 
+Musolf A.M., Holzinger E.R., Malley J.D., Bailey-Wilson J.E., What makes a good prediction? Feature importance and beginning to open the black box of machine learning in genetics, Hum Genet, 141, pp. 1515-1528, (2022); 
+Xu X., Wang J., Zhong B., Ming W., Chen M., Deep learning-based tool wear prediction and its application for machining process using multi-scale feature fusion and channel attention mechanism, Measurement, 177, (2021); 
+Barredo Arrieta A., Diaz-Rodriguez N., Del Ser J., Bennetot A., Tabik S., Barbado A., Et al., Explainable artificial intelligence (XAI): concepts, taxonomies, opportunities and challenges toward responsible AI, Inf Fusion, 58, pp. 82-115, (2020); 
+Sotubadi S.V., Liu R., Neguyen V., (2023); 
+Rudin C., Stop explaining black box machine learning models for high stakes decisions and use interpretable models instead, Nat Mach Intell, 1, pp. 206-215, (2019); 
+Slack D., Hilgard S., Jia E., Singh S., Lakkaraju H., Fooling LIME and SHAP: Adversarial attacks on post hoc explanation methods; 
+Mann H.B., Whitney D.R., On a test of whether one of two random variables is stochastically larger than the other, Ann Math Stat, pp. 50-60, (1947); 
+Dekking F.M., Kraaikamp C., Lopuhaa H.P., Meester L.E., (2005); 
+Bhattacharyya S.S., Deprettere E.F., Leupers R., Takala J., Handbook of signal processing systems, Springer International Publishing, (2018); 
+Tanton J.S., Encyclopedia of Mathematics, Perma-Bound Books, (2005); 
+Falconer K., Fractal Geometry: Mathematical Foundations and applications, (2004); 
+Banerjee S., Easwaramoorthy D., Gowrisankar A., Fractal Functions, Dimensions and Signal, Analysis, (2021); 
+Higuchi T., Approach to an irregular time series on the basis of the fractal theory, Phys D, 31, pp. 277-283, (1988); 
+Schuster H.G., Just W., Deterministic Chaos: an Introduction, (2006); 
+Borovskikh Y., U-statistics in danach spaces, Acta Appl Math, 35, pp. 213-298, (1994); 
+Gibbons J.D., Chakraborti S., Nonparametric Statistical Inference, (2014); 
+Iglesias Vazquez F., Hartl A., Zseby T., Zimek A., Anomaly detection in streaming data: a comparison and evaluation study, Expert Syst Appl, 233, (2023); 
+Nguyen T.K., Ahmad Z., Nguyen D.T., Kim J.M., A remaining useful lifetime prediction model for concrete structures using Mann-Whitney U test state indicator and deep learning, Mech Syst Sig Process, 222, (2025)
+PUBLISHER: Elsevier Ltd
+ISSN: 0003682X
+CODEN: AACOB
+LANGUAGE OF ORIGINAL DOCUMENT: English
+DOCUMENT TYPE: Article
+PUBLICATION STAGE: Final
+SOURCE: Scopus
+
